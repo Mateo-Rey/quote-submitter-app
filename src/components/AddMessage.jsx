@@ -47,8 +47,6 @@ export default function AddMessage() {
             name="name"
             onChange={updateForm}
             value={form.name}
-            //required
-            //value={form.title}
           />
 
         {!formSubmitted && <button>Submit Form</button>}

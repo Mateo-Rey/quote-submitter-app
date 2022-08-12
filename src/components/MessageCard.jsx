@@ -1,18 +1,17 @@
-import { useState } from "react"
-import { useEffect } from "react"
+function MessageCard({message}) {
 
-export const MessageCard = ( ) => {
-    const [message, setMessage] = useState('')
-    useEffect((e) => {
-        fetch("https://chat-app-98837.web.app/messages")
-        .then(res => res.json())
-        .then(data => setMessage(data()))
-        .catch(alert(err=> err.message))
-    },[])
     return (
-        <> 
-        <div className="Message-Card">{message}</div>
-        </>
-        
+        <section>
+        {message && message.map((quote)=>(
+            <div className="posted-quote" key={quote.id}>
+            <h3>{quote.name}</h3>
+            <p>{quote.text}</p>
+            </div>
+            
+        ))}
+   
+        </section>
     )
 }
+
+export default MessageCard;
