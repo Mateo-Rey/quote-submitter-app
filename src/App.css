@@ -1,7 +1,25 @@
-* {
+:root {
+  --dark-purple: #700548;
+  --light-blue: #7899D4;
+  --light-purple: #8332AC;
+  --beige: #F2D1C9;
+}
 
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
 
-  background-color: aqua;
-  
-  
+div.App {
+  background-color: var(--beige);
+  display: flex;
+  align-items: center;
+  justify-content:first baseline;
+  flex-direction: column;
+  padding: 50px;
+  margin: 5x;
+  color: var(--dark-purple)
 }
