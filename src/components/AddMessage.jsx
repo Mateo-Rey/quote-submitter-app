@@ -1,3 +1,5 @@
+import '../styles/Header.css'
+
 import { useState, useEffect } from "react";
 export default function AddMessage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -33,6 +35,15 @@ export default function AddMessage() {
     return (
       <div className="App">
         <form onSubmit={formSubmit}>
+          <label>Title</label>
+          <input
+          type='text'
+          name='title'
+          placeholder="your title here..."
+          value = {form.title}
+          >
+
+          </input>
           <label>Message</label>
           <input
             type="text"
@@ -41,15 +52,8 @@ export default function AddMessage() {
             onChange={updateForm}
             value={form.text}
           ></input>
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            onChange={updateForm}
-            value={form.name}
-          />
 
-        {!formSubmitted && <button>Submit Form</button>}
+        {!formSubmitted && <button className="bottom" id='bottom'>Submit Form</button>}
         {errorMessage &&<h1>There was an error: <br/>{errorMessage}</h1>}
         </form> 
       </div>
