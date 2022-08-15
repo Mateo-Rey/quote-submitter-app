@@ -1,4 +1,4 @@
-import '../styles/Header.css'
+import '../styles/Master.css'
 
 import { useState, useEffect } from "react";
 export default function AddMessage() {
