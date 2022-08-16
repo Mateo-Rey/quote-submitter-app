@@ -42,17 +42,17 @@ function App() {
       <Router>
         <div className="App">
           <header>
-            <div className="nav-container">
+            
               <Link to="/" className="indexLink">
-                <Button>Home</Button>
+                <Button classname='home' type='link' >Home</Button>
               </Link>
               &nbsp;
               <Link to="/resources" className="resourcesLink">
-               <Button className="class">Resources</Button> 
+               <Button type='link' className="resources">Resources</Button> 
               </Link>
               &nbsp;
-              {!isLoggedin && <Button onClick={handleLogin}>Login!</Button>}
-            </div>
+              {!isLoggedin && <Button type='primary' onClick={handleLogin}>Login!</Button>}
+            
           </header>
           <Routes>
             <Route path="/resources" element={<GetHelpResources />} />
