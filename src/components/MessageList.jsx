@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import MessageCard from './MessageCard'
-import '../styles/MessageList.css'
+import '../App.css'
 export default function MessageList ()  {
     const [message, setMessage] = useState('')
     useEffect(() => {
@@ -11,8 +11,7 @@ export default function MessageList ()  {
     return (
         <div className='quote-box'>
             <h2>Message List</h2>
-           
-               <div></div> <MessageCard  message={message}/>
+          <MessageCard  message={message}/>
         </div>
 
     )

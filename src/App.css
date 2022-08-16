@@ -5,6 +5,7 @@
   --light-blue: #7899D4;
   --light-purple: #8332AC;
   --beige: #F2D1C9;
+  --background-purple:  #372248;
 }
 
 *,
@@ -16,27 +17,63 @@
 }
 
 div.App {
-  background-color: var(--beige);
+  background-color: var(--background-purple);
   display: flex;
   align-items: center;
-  justify-content:first baseline;
+  justify-content: space-between;
   flex-direction: column;
   padding: 50px;
   margin: 5x;
-  color: var(--dark-purple)
+  color: var(--beige)
 }
 
 header {
   display: flex;
   width: 100vw;
   height: 150px;
-  margin: 10px;
-  padding: 10px;
+  margin: 0px;
+  padding: 20px;
   border: double var(--dark-purple) 20px;
-  align-items:center;
-  justify-content: space-between;
+  align-items: flex-end;
+  justify-content: space-around ;
+  background-image: url(beach-g51cd0a526_1920.jpg); 
+  background-position-y: center;
+  background-position-x: center;
+  background-size: 100%;
+}
+Button.home {
+  width: 200px;
+  height: 50px;
+  background-color: var(--dark-purple);
 }
 
-div.nav-container {
-  background-image: url(beach-g51cd0a526_1920.jpg);
-} 
+Button.resources {
+  width: 200px;
+  height: 50px;
+  background-color: var(--dark-purple);
+}
+
+h2 {
+  color:var(--beige)
+}
+
+div.posted-quote {
+  color:var(--beige)
+}
+
+div.posted-quote > h3 {
+  color: antiquewhite
+}
+
+div.posted-quote {
+  display: flex;
+  width: 80vw;
+  height: 75px;
+  flex-direction: column;
+}
+
+.quote-box {
+  border: double #19647E 20px;
+  display: flex;
+}
+
