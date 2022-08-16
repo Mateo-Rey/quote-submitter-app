@@ -1,48 +1,68 @@
+import "../App.css";
+import { Button } from "antd";
 export const GetHelpResources = () => {
-  return(
-  <ul>
-    <h1>Florida Department of Children and Families</h1> <br />
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi soluta
-      provident consequatur itaque voluptates? Laborum blanditiis molestiae
-      vitae distinctio, dicta iste porro doloremque similique aliquid labore nam
-      nobis explicabo deleniti. Veritatis provident consequuntur atque
-      repellendus temporibus neque aliquid, dicta consectetur nulla eveniet
-      sapiente quam vero? Harum, provident ratione. Sint incidunt, adipisci ad
-      doloribus quibusdam consectetur tempora. Eligendi omnis reprehenderit
-      error.
-    </p>
-    <br />
-    <li>
-      <a href="http://" >Florida Department of Children and Families</a>
-    </li>
-    <h1>24/7 National Domestic Violence Hotline</h1> <br />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas natus,
-      perspiciatis veritatis dicta beatae sed, recusandae aut minus
-      necessitatibus qui quam illo neque itaque quos. In voluptatem molestiae
-      facere hic. Nemo debitis, veniam placeat eius eligendi unde suscipit velit
-      consectetur et, officia optio ipsa ad praesentium esse ipsam inventore
-      fuga sapiente cupiditate perspiciatis laudantium. Veritatis, commodi? In
-      illo placeat facere.
-    </p>
-    <br />
-    <li>
-      <a href="http://">24/7 National Domestic Violence Hotline</a>
-    </li>
-    <h1>Aid to Victims of Domestic Abuse</h1> <br />
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt fugit
-      illum nulla. Facilis soluta est quidem voluptatum iste quis corrupti optio
-      aliquam corporis consequuntur? Quaerat libero quod aliquid sunt eos! Sequi
-      et, a iste, praesentium culpa dolorem vitae vero tenetur voluptatibus
-      esse, eum adipisci maiores porro earum. Officiis cum atque eius cumque,
-      perspiciatis velit qui vero nihil eaque, eligendi quas.
-    </p>
-    <br />
-    <li>
-      <a href="http://">Aid to Victims of Domestic Abuse</a>
-    </li>
-  </ul>
-  )
+  return (
+    <div className="resources-body">
+      <div className="resource-box">
+        <h1>24/7 National Domestic Violence Hotline</h1> <br />
+        <p>
+        24 hours a day, seven days a week, 365 days a year, the National Domestic Violence Hotline provides essential tools and support to help survivors of domestic violence so they can live their lives free of abuse. 
+        </p>
+        <p>
+        Contacts to The Hotline can expect highly-trained, expert advocates to offer free, confidential, and compassionate support, crisis intervention information, education, and referral services in over 200 languages.
+        </p>
+        <br />
+        <Button type='primary' className='button-purple'>
+          <a
+            href="https://www.thehotline.org/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            24/7 National Domestic Violence Hotline
+          </a>
+        </Button>
+      </div>
+      <div className="resource-box">
+        <h1>Florida Department of Children and Families</h1> <br />
+        <p>
+        The mission of the Department of Children and Families is to work in partnership with local communities to protect the vulnerable, promote strong and economically self-sufficient families, and advance personal and family recovery and resiliency.
+        </p>
+        <p>
+        We are a highly skilled workforce committed to empowering people with complex and varied needs to achieve the best outcomes for themselves and their families. In collaboration with community stakeholders, we will deliver world class and continuously improving service focused on providing the people we serve with the level and quality that we would demand and expect for our own families.
+        </p>
+        <br />
+        <Button type='primary' className='button-purple'>
+          <a
+            href="https://www.myflfamilies.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Florida Department of Children and Families
+          </a>
+        </Button>
+      </div>
+      <div className="resource-box">
+        <h1>Aid to Victims of Domestic Abuse</h1> <br />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+          fugit illum nulla. Facilis soluta est quidem voluptatum iste quis
+          corrupti optio aliquam corporis consequuntur? Quaerat libero quod
+          aliquid sunt eos! Sequi et, a iste, praesentium culpa dolorem vitae
+          vero tenetur voluptatibus esse, eum adipisci maiores porro earum.
+          Officiis cum atque eius cumque, perspiciatis velit qui vero nihil
+          eaque, eligendi quas.
+        </p>
+        <br />
+        <Button type='primary' className='button-purple'>
+          <a
+            href="https://www.avdaonline.org/understanding-domestic-violence"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Aid to Victims of Domestic Abuse
+          </a>
+        </Button>
+      </div>
+    </div>
+  );
 };

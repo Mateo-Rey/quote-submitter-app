@@ -43,7 +43,7 @@ function App() {
         <Router>
           <header>
             <Link to="/" className="indexLink">
-              <Button type="default" classname="home">
+              <Button type="link" className="resources">
                 Home
               </Button>
             </Link>
@@ -54,8 +54,8 @@ function App() {
               </Button>
             </Link>
             &nbsp;
-            <Button type="primary" onClick={handleLogin}>
-              Login!
+            <Button type="link" className="resources" onClick={handleLogin}>
+              Login
             </Button>
           </header>
           <Routes>

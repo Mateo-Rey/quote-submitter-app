@@ -1,4 +1,4 @@
-import "../styles/Master.css";
+import '../App.css'
 import { useState, useEffect } from "react";
 
 export default function AddMessage() {
@@ -18,7 +18,7 @@ export default function AddMessage() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(form),
+          body: JSON.stringify(form), 
         }
       );
       const data = results.json();
@@ -44,16 +44,17 @@ export default function AddMessage() {
         <input
           type="text"
           name="title"
+          onChange={updateForm}
           placeholder="your title here..."
           value={form.title}
         ></input>
         <label>Message</label>
         <input
           type="text"
-          name="text"
+          name="message"
           placeholder="your message here..."
           onChange={updateForm}
-          value={form.text}
+          value={form.message}
         ></input>
 
         {!formSubmitted && (

@@ -1,13 +1,5 @@
 @import '~antd/dist/antd.css';
 
-:root {
-  --dark-purple: #700548;
-  --light-blue: #7899D4;
-  --light-purple: #8332AC;
-  --beige: #F2D1C9;
-  --background-purple:  #372248;
-}
-
 *,
 *::before,
 *::after {
@@ -15,6 +7,54 @@
   padding: 0px;
   box-sizing: inherit;
 }
+
+:root {
+  --dark-purple: #700548;
+  --light-blue: #7899D4;
+  --light-purple: #8332AC;
+  --beige: #F2D1C9;
+  --background-purple:  #372248;
+  --pastel-blue: #7899d4;
+  --opal: #bad1cd;
+  --royal-purple: #7D387D;
+  --turquoise: #50C9CE;
+  --smoky-grey: #464F51;
+}
+
+button.bottom {
+  width: 100px;
+  height: 30px;
+  background-color: var(--opal);
+  color: var(--royal-purple);
+  font-size: medium;
+  font-weight: 400;
+  border-radius: 5px;
+  border-style: inset;
+  border: groove 10px var(--royal-purple);
+  margin: 5px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form > input {
+  background-color: antiquewhite;
+  color: black;
+  width: 300px;
+  height: 25px;
+  margin: 10px;
+  padding: 5px;
+  border-style: inset;
+  border-top: 10px inset var(--opal);
+  border-right: 10px inset var(--royal-purple);
+  border-bottom: 10px inset var(--pastel-blue);
+  border-left: 10px inset var(--royal-purple);
+}
+
 
 div.App {
   background-color: var(--background-purple);
@@ -41,44 +81,41 @@ header {
   background-position-x: center;
   background-size: 100%;
 }
-Button.home {
-  width: 200px;
-  height: 50px;
-  background-color: var(--dark-purple);
-}
 
 Button.resources {
   width: 200px;
   height: 50px;
   background-color: var(--dark-purple);
+  font-size: medium;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  color:aliceblue;
 }
 
 h2 {
-  color:var(--beige)
+  color:var(--beige);
 }
 
 div.posted-quote {
-  color:var(--beige)
+  color:var(--turquoise)
 }
 
 div.posted-quote > h3 {
-  color: antiquewhite
+  color: var(--turquoise)
 }
 
 div.posted-quote {
-  display: flex;
   height: 75px;
   flex-direction: column;
-  margin: 20px;
 }
 
 .quote-box {
   border: double #19647E 20px;
   display: flex;
   flex-direction: column;
-
-  justify-content: center;
-  align-items:center; 
+ justify-content: center;
+ align-items: center;
+ background-color: var(--royal-purple);
   width: 600px;
 }
 
@@ -88,13 +125,45 @@ div.posted-quote {
   flex-direction: column;
   justify-content: space-between;
   align-self: baseline;
+  border: 5px var() double;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 500px;
+  background-color: var(--smoky-grey);
 }   
 
-div.quote-box > h3 {
+div.quote-box > h2 {
   font-size: 20pt;
 }
 
 div.quote-box > p {
   font: 15pt;
+}
+
+h1 {
+ color: var(--opal);
+ font-size: 25pt;
+}
+
+div.resource-box {
+  border: ridge 10px  var(--light-blue);
+  padding: 25px;
+  background-color: var(--royal-purple);
+}
+
+div.resources-body {
+  margin-top: 40px;
+  
+}
+
+p {
+  font-weight: 400;
+  font-size: 13pt;
+  color: var(--beige)
+}
+
+.button-purple {
+  background-color: var(--light-purple);
+  border: solid 5px;
 }
 

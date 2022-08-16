@@ -4,9 +4,10 @@ import '../App.css'
 export default function MessageList ()  {
     const [message, setMessage] = useState('')
     useEffect(() => {
+        let sortedData
         fetch("https://chat-app-98837.web.app/messages")
         .then(res => res.json())
-        .then(data => setMessage(data))
+        .then(data=> setMessage(data))
     },[])
     return (
         <div className='quote-box'>
