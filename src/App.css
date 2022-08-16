@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 :root {
   --dark-purple: #700548;
   --light-blue: #7899D4;
@@ -23,3 +25,18 @@ div.App {
   margin: 5x;
   color: var(--dark-purple)
 }
+
+header {
+  display: flex;
+  width: 100vw;
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
+  border: double var(--dark-purple) 20px;
+  align-items:center;
+  justify-content: space-between;
+}
+
+div.nav-container {
+  background-image: url(beach-g51cd0a526_1920.jpg);
+} 

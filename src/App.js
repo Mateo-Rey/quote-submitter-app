@@ -3,13 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { GetHelpResources } from "./pages/GetHelpResources";
 import Home from "./pages/Home";
 import { useState } from "react";
-import {
-  getAuth,
-  GoogleAuthProvider,
-  signInWithPopup,
-} from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-
+import { Button, Modal } from "antd"
 
 const firebaseConfig = {
   apiKey: "AIzaSyAQaHgg_f04XfRG7yZM2ioYpxHJT0BOJ7A",
@@ -17,7 +13,7 @@ const firebaseConfig = {
   projectId: "chat-app-98837",
   storageBucket: "chat-app-98837.appspot.com",
   messagingSenderId: "625295234706",
-  appId: "1:625295234706:web:e84ea856a3bd587dd6f84b"
+  appId: "1:625295234706:web:e84ea856a3bd587dd6f84b",
 };
 
 const connect = () => {
@@ -25,32 +21,38 @@ const connect = () => {
   return getAuth(app);
 };
 
-
-
 function App() {
   const [isLoggedin, setIsLoggedIn] = useState(false);
 
-  const handleLogin = async ( ) => {
-    const auth = connect()
-      const provider = new GoogleAuthProvider()
-      const user = await signInWithPopup(auth, provider)
-          .catch(err => alert(err.message))
-      if(user) {
-          console.log(user)
-          setIsLoggedIn(true)
-  }
-  }
-
+  const handleLogin = async () => {
+    const auth = connect();
+    const provider = new GoogleAuthProvider();
+    const user = await signInWithPopup(auth, provider)
+    .catch ((err) => { <Modal>{err}</Modal>})
+   
+    ;
+    if (user) {
+      console.log(user);
+      setIsLoggedIn(true);
+    }
+  };
 
   return (
     <>
-  
       <Router>
         <div className="App">
           <header>
-            <Link to="/">Home</Link>&nbsp;
-            <Link to="/resources">Resources</Link>&nbsp;
-            {!isLoggedin && <button onClick={handleLogin}>Login!</button>}
+            <div className="nav-container">
+              <Link to="/" className="indexLink">
+                <Button>Home</Button>
+              </Link>
+              &nbsp;
+              <Link to="/resources" className="resourcesLink">
+               <Button className="class">Resources</Button> 
+              </Link>
+              &nbsp;
+              {!isLoggedin && <Button onClick={handleLogin}>Login!</Button>}
+            </div>
           </header>
           <Routes>
             <Route path="/resources" element={<GetHelpResources />} />
