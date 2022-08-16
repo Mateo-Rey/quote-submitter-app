@@ -4,21 +4,6 @@
   --royal-purple: #7d5ba6;
 }
 
-button.top {
-  width: 200px;
-  height: 75px;
-  background-color: var(--opal);
-  color: var(--royal-purple);
-  font-size: 13pt;
-  border-radius: 5px;
-  border-top: 10px inset var(--opal);
-  border-right: 10px inset var(--royal-purple);
-  border-bottom: 10px inset var(--royal-purple);
-  border-left: 10px inset var(--pastel-blue);
-  margin: 10px;
-  padding: 5px;
-}
-
 button.bottom {
   width: 100px;
   height: 30px;

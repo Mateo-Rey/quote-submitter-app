@@ -11,7 +11,7 @@ export default function MessageList ()  {
     return (
         <div className='quote-box'>
             <h2>Message List</h2>
-          <MessageCard  message={message}/>
+            <MessageCard  message={message}/>
         </div>
 
     )
