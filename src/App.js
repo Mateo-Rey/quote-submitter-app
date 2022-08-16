@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import { useState } from "react";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-import { Button, Modal } from "antd"
+import { Button, Modal } from "antd";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAQaHgg_f04XfRG7yZM2ioYpxHJT0BOJ7A",
@@ -27,10 +27,10 @@ function App() {
   const handleLogin = async () => {
     const auth = connect();
     const provider = new GoogleAuthProvider();
-    const user = await signInWithPopup(auth, provider)
-    .catch ((err) => { <Modal>{err}</Modal>})
-   
-    ;
+    const user = await signInWithPopup(auth, provider).catch((err) => {
+      <Modal>{err}</Modal>;
+    });
+
     if (user) {
       console.log(user);
       setIsLoggedIn(true);
@@ -39,27 +39,31 @@ function App() {
 
   return (
     <>
-      <Router>
-        <div className="App">
+      <div className="App">
+        <Router>
           <header>
-            
-              <Link to="/" className="indexLink">
-                <Button classname='home' type='link' >Home</Button>
-              </Link>
-              &nbsp;
-              <Link to="/resources" className="resourcesLink">
-               <Button type='link' className="resources">Resources</Button> 
-              </Link>
-              &nbsp;
-              {!isLoggedin && <Button type='primary' onClick={handleLogin}>Login!</Button>}
-            
+            <Link to="/" className="indexLink">
+              <Button type="default" classname="home">
+                Home
+              </Button>
+            </Link>
+            &nbsp;
+            <Link to="/resources" className="resourcesLink">
+              <Button type="link" className="resources">
+                Resources
+              </Button>
+            </Link>
+            &nbsp;
+            <Button type="primary" onClick={handleLogin}>
+              Login!
+            </Button>
           </header>
           <Routes>
             <Route path="/resources" element={<GetHelpResources />} />
             <Route index path="/" element={<Home />} />
           </Routes>
-        </div>
-      </Router>
+        </Router>
+      </div>
     </>
   );
 }
