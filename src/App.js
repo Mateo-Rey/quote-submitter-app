@@ -27,7 +27,7 @@ function App() {
     const auth = connect();
     const provider = new GoogleAuthProvider();
     const user = await signInWithPopup(auth, provider).catch((err) => {
-      alert({err});
+      
     });
 
     if (user) {
@@ -43,6 +43,12 @@ function App() {
         
         <Router>
           <header>
+          {isLoggedIn ? <Button type="link" className="resources" onClick={() =>{signOut(getAuth()).then(setIsLoggedIn(false))}}>
+              Logout
+            </Button>: <Button type="link" className="resources" onClick={handleLogin}>
+              Login
+            </Button> 
+            }&nbsp;
             <Link to="/" className="indexLink">
               <Button type="link" className="resources">
                 Home
@@ -55,12 +61,7 @@ function App() {
               </Button>
             </Link>
             &nbsp;
-            {isLoggedIn ? <Button type="link" className="resources" onClick={() =>{signOut(getAuth()).then(setIsLoggedIn(false))}}>
-              Logout
-            </Button>: <Button type="link" className="resources" onClick={handleLogin}>
-              Login
-            </Button> 
-            }
+            
             
           </header>
           <Routes>

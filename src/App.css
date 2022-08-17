@@ -74,7 +74,7 @@ header {
   padding: 20px;
   border: double var(--dark-purple) 20px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-image: url(beach-g51cd0a526_1920.jpg);
   background-position-y: center;
   background-position-x: center;
@@ -112,11 +112,11 @@ div.posted-quote {
   border: double #19647e 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: var(--royal-purple);
   width: 85vw;
-  height: 70vh;
+  height: 600px;
   margin-top: 50px;
 }
 
@@ -205,5 +205,6 @@ p {
 .pre-message {
   width: 300px;
   height: 75px;
-  margin-top: 20px;
+  margin: 60px;
+
 }

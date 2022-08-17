@@ -24,7 +24,7 @@ export default function Home({ isLoggedIn }) {
       {isLoggedIn ? (
         <AddMessage />
       ) : (
-        <h2 className="pre-message">Please login to add a message and make sure all posts do not conatin confidential information</h2>
+        <h2 className="pre-message">Please login to add a message and make sure all posts do not contain any confidential information</h2>
       )}
 
       <MessageList message={message} />
