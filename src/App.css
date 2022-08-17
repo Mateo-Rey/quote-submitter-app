@@ -201,3 +201,9 @@ p {
   left: 0;
   top: 0px;
 }
+
+.pre-message {
+  width: 300px;
+  height: 75px;
+  margin-top: 20px;
+}

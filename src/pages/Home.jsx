@@ -24,7 +24,7 @@ export default function Home({ isLoggedIn }) {
       {isLoggedIn ? (
         <AddMessage />
       ) : (
-        <div className="login-message"><h2>Login to add a message!</h2><p>Remember each message you post is public and must stay confidential. For example no names, addresses, phone numbers, or any information that can indentify someone.</p><div className="warning"></div></div>
+        <h2 className="pre-message">Please login to add a message and make sure all posts do not conatin confidential information</h2>
       )}
 
       <MessageList message={message} />
