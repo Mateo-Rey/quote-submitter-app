@@ -1,7 +1,7 @@
-import '../App.css'
+import "../App.css";
 import { useState, useEffect } from "react";
 
-export default function AddMessage() {
+export default function AddMessage({ setNewMessage }) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [form, setForm] = useState({});
@@ -18,12 +18,13 @@ export default function AddMessage() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(form), 
+          body: JSON.stringify(form),
         }
       );
       const data = results.json();
-      setFormSubmitted(true);
       setErrorMessage("");
+      setFormSubmitted(true);
+      window.location.reload(false)
       console.log(data);
     } catch (error) {
       console.error(error);
@@ -58,10 +59,11 @@ export default function AddMessage() {
         ></input>
 
         {!formSubmitted && (
-          <button className="bottom" id="bottom">
+          <button className="bottom" id="bottom" type="submit">
             Submit Form
           </button>
         )}
+
         {errorMessage && (
           <h1>
             There was an error: <br />

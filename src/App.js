@@ -1,11 +1,11 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import { GetHelpResources } from "./pages/GetHelpResources";
 import Home from "./pages/Home";
 import { useState } from "react";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-import { Button, Modal } from "antd";
+import { Button } from "antd";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAQaHgg_f04XfRG7yZM2ioYpxHJT0BOJ7A",
@@ -22,13 +22,12 @@ const connect = () => {
 };
 
 function App() {
-  const [isLoggedin, setIsLoggedIn] = useState(false);
-
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const handleLogin = async () => {
     const auth = connect();
     const provider = new GoogleAuthProvider();
     const user = await signInWithPopup(auth, provider).catch((err) => {
-      <Modal>{err}</Modal>;
+      alert({err});
     });
 
     if (user) {
@@ -40,6 +39,8 @@ function App() {
   return (
     <>
       <div className="App">
+      <Button className='leave-site' type='primary'><a href='https://www.google.com'>Leave Site</a></Button>
+        
         <Router>
           <header>
             <Link to="/" className="indexLink">
@@ -54,13 +55,17 @@ function App() {
               </Button>
             </Link>
             &nbsp;
-            <Button type="link" className="resources" onClick={handleLogin}>
+            {isLoggedIn ? <Button type="link" className="resources" onClick={() =>{signOut(getAuth()).then(setIsLoggedIn(false))}}>
+              Logout
+            </Button>: <Button type="link" className="resources" onClick={handleLogin}>
               Login
-            </Button>
+            </Button> 
+            }
+            
           </header>
           <Routes>
             <Route path="/resources" element={<GetHelpResources />} />
-            <Route index path="/" element={<Home />} />
+            <Route index path="/" element={<Home isLoggedIn={isLoggedIn} />} />
           </Routes>
         </Router>
       </div>

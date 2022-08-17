@@ -33,33 +33,11 @@ export const GetHelpResources = () => {
         <br />
         <Button type='primary' className='button-purple'>
           <a
-            href="https://www.myflfamilies.com/"
+            href="https://www.myflfamilies.com/service-programs/domestic-violence"
             target="_blank"
             rel="noreferrer"
           >
             Florida Department of Children and Families
-          </a>
-        </Button>
-      </div>
-      <div className="resource-box">
-        <h1>Aid to Victims of Domestic Abuse</h1> <br />
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
-          fugit illum nulla. Facilis soluta est quidem voluptatum iste quis
-          corrupti optio aliquam corporis consequuntur? Quaerat libero quod
-          aliquid sunt eos! Sequi et, a iste, praesentium culpa dolorem vitae
-          vero tenetur voluptatibus esse, eum adipisci maiores porro earum.
-          Officiis cum atque eius cumque, perspiciatis velit qui vero nihil
-          eaque, eligendi quas.
-        </p>
-        <br />
-        <Button type='primary' className='button-purple'>
-          <a
-            href="https://www.avdaonline.org/understanding-domestic-violence"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Aid to Victims of Domestic Abuse
           </a>
         </Button>
       </div>

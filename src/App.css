@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 
 *,
 *::before,
@@ -10,15 +10,15 @@
 
 :root {
   --dark-purple: #700548;
-  --light-blue: #7899D4;
-  --light-purple: #8332AC;
-  --beige: #F2D1C9;
-  --background-purple:  #372248;
+  --light-blue: #7899d4;
+  --light-purple: #8332ac;
+  --beige: #f2d1c9;
+  --background-purple: #372248;
   --pastel-blue: #7899d4;
   --opal: #bad1cd;
-  --royal-purple: #7D387D;
-  --turquoise: #50C9CE;
-  --smoky-grey: #464F51;
+  --royal-purple: #7d387d;
+  --turquoise: #50c9ce;
+  --smoky-grey: #464f51;
 }
 
 button.bottom {
@@ -55,7 +55,6 @@ form > input {
   border-left: 10px inset var(--royal-purple);
 }
 
-
 div.App {
   background-color: var(--background-purple);
   display: flex;
@@ -64,7 +63,7 @@ div.App {
   flex-direction: column;
   padding: 50px;
   margin: 5x;
-  color: var(--beige)
+  color: var(--beige);
 }
 
 header {
@@ -74,9 +73,9 @@ header {
   margin: 0px;
   padding: 20px;
   border: double var(--dark-purple) 20px;
-  align-items: center;    
-  justify-content: space-around ;
-  background-image: url(beach-g51cd0a526_1920.jpg); 
+  align-items: center;
+  justify-content: space-around;
+  background-image: url(beach-g51cd0a526_1920.jpg);
   background-position-y: center;
   background-position-x: center;
   background-size: 100%;
@@ -87,21 +86,21 @@ Button.resources {
   height: 50px;
   background-color: var(--dark-purple);
   font-size: medium;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
-  color:aliceblue;
+  color: aliceblue;
 }
 
 h2 {
-  color:var(--beige);
+  color: var(--beige);
 }
 
 div.posted-quote {
-  color:var(--turquoise)
+  color: var(--turquoise);
 }
 
 div.posted-quote > h3 {
-  color: var(--turquoise)
+  color: var(--turquoise);
 }
 
 div.posted-quote {
@@ -110,16 +109,18 @@ div.posted-quote {
 }
 
 .quote-box {
-  border: double #19647E 20px;
+  border: double #19647e 20px;
   display: flex;
   flex-direction: column;
- justify-content: center;
- align-items: center;
- background-color: var(--royal-purple);
-  width: 600px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--royal-purple);
+  width: 85vw;
+  height: 70vh;
+  margin-top: 50px;
 }
 
-.posted-quote{
+.posted-quote {
   display: flex;
   padding: 20px;
   flex-direction: column;
@@ -128,9 +129,9 @@ div.posted-quote {
   border: 5px var() double;
   margin-top: 25px;
   margin-bottom: 25px;
-  width: 500px;
   background-color: var(--smoky-grey);
-}   
+  border: solid var(--smoky-grey) 10px;
+}
 
 div.quote-box > h2 {
   font-size: 20pt;
@@ -141,25 +142,26 @@ div.quote-box > p {
 }
 
 h1 {
- color: var(--opal);
- font-size: 25pt;
+  color: var(--opal);
+  font-size: 25pt;
 }
 
 div.resource-box {
-  border: ridge 10px  var(--light-blue);
+  border: ridge 10px var(--light-blue);
   padding: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   background-color: var(--royal-purple);
 }
 
 div.resources-body {
   margin-top: 40px;
-  
 }
 
 p {
   font-weight: 400;
   font-size: 13pt;
-  color: var(--beige)
+  color: var(--beige);
 }
 
 .button-purple {
@@ -167,3 +169,35 @@ p {
   border: solid 5px;
 }
 
+.leave-site {
+  color: white;
+  background-color: red;
+  border: red;
+}
+
+.login-message {
+  width: 500px;
+  height: 150px;
+  background-color: red;
+  margin-top: 40px;
+  color: antiquewhite;
+  border: var(--smoky-grey) solid 10px;
+}
+
+.header-message {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: baseline;
+  border: 5px var() double;
+  width: 500px;
+  background-color: var(--smoky-grey);
+  border: solid var(--smoky-grey) 10px;
+}
+
+.leave-site {
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
